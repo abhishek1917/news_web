@@ -1,8 +1,8 @@
 //import Image from "next/image";
-import new_section from "@/component/new_section";
+import  NewsSection from "@/component/new_section";
 
 export default function Home() {
-  return (
+  return (<>
    <nav className="Navbar">
     <div className="logo">News_Web</div>
     <div className="nav-link">
@@ -14,7 +14,11 @@ export default function Home() {
     </div>
     <div className="log-in">Login</div>
    </nav>
+    <main>
+         <NewsSection/>
+    </main>
+  </>
+  
 
-   
   );
 }

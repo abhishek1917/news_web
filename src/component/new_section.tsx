@@ -9,7 +9,7 @@ const newsItems = [
   ];
 
 
-export default function (){
+export default function NewsSection (){
     return (
       <section className="px-4 py-8">
         <h2 className="text-2xl font-bold text-center mb-6 text-grey-800 dark:text-white"> latest news</h2>
