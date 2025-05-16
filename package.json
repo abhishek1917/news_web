@@ -9,9 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+=======
+    "@radix-ui/react-dialog": "^1.1.13",
+    "@radix-ui/react-slot": "^1.2.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.11.4",
+    "lucide-react": "^0.510.0",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.3.0"
+>>>>>>> 2ab67877efb963b2709114f893a5f9975084afb1
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -19,11 +34,18 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+<<<<<<< HEAD
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.6",
+=======
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.2.9",
+>>>>>>> 2ab67877efb963b2709114f893a5f9975084afb1
     "typescript": "^5"
   }
 }
