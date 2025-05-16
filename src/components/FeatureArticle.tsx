@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function FeatureArticle({
@@ -14,11 +15,13 @@ export default function FeatureArticle({
 }) {
   return (
     <div className='rounded-lg overflow-hidden shadow-md bg-white group'>
-      <Link href='#'>
+      <Link href='/news/1'>
         <div className='overflow-hidden h-48 bg-gray-200'>
-          <img
+          <Image
             src={image}
             alt={title}
+            width={500}
+            height={500}
             className='w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105'
           />
         </div>

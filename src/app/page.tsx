@@ -18,19 +18,19 @@ export default function Home() {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             <FeatureArticle
               title='Global Climate Summit Reaches Historic Agreement'
-              image='/api/placeholder/600/400'
+              image='/news/image-1.jpg'
               category='Environment'
               timeToRead='5 min read'
             />
             <FeatureArticle
               title='Tech Giants Unveil New AI Advances'
-              image='/api/placeholder/600/400'
+              image='/news/image-2.jpg'
               category='Technology'
               timeToRead='4 min read'
             />
             <FeatureArticle
               title='Global Markets Rally After Economic Data'
-              image='/api/placeholder/600/400'
+              image='/news/image-3.jpg'
               category='Finance'
               timeToRead='3 min read'
             />
