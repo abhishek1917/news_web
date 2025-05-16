@@ -18,6 +18,7 @@ import {
   FiDownload,
 } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from '../ui/button';
 
 export default function FloatingNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,48 +45,40 @@ export default function FloatingNavbar() {
             <div className='flex items-center justify-between'>
               {/* Logo */}
               <div className='text-xl font-bold text-blue-600'>
-                <Link href='/'>NewsHub</Link>
+                <Link href='/' className=''>
+                  NewsHub
+                </Link>
               </div>
 
               {/* Desktop Navigation */}
               <div className='hidden md:flex space-x-8'>
                 <Link
                   href='/'
-                  className={`text-gray-800 hover:text-blue-600 font-medium ${
-                    isActive('/') ? 'text-blue-600 font-semibold' : ''
-                  }`}
+                  className={`relative inline-block text-black after:absolute after:left-0 after:-bottom-0.5 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
                 >
                   Home
                 </Link>
                 <Link
                   href='/trending'
-                  className={`text-gray-800 hover:text-blue-600 font-medium ${
-                    isActive('/trending') ? 'text-blue-600 font-semibold' : ''
-                  }`}
+                  className={`relative inline-block text-black after:absolute after:left-0 after:-bottom-0.5 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
                 >
                   Trending
                 </Link>
                 <Link
                   href='/world'
-                  className={`text-gray-800 hover:text-blue-600 font-medium ${
-                    isActive('/world') ? 'text-blue-600 font-semibold' : ''
-                  }`}
+                  className={`relative inline-block text-black after:absolute after:left-0 after:-bottom-0.5 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
                 >
                   World
                 </Link>
                 <Link
                   href='/technology'
-                  className={`text-gray-800 hover:text-blue-600 font-medium ${
-                    isActive('/technology') ? 'text-blue-600 font-semibold' : ''
-                  }`}
+                  className={`relative inline-block text-black after:absolute after:left-0 after:-bottom-0.5 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
                 >
                   Technology
                 </Link>
                 <Link
                   href='/business'
-                  className={`text-gray-800 hover:text-blue-600 font-medium ${
-                    isActive('/business') ? 'text-blue-600 font-semibold' : ''
-                  }`}
+                  className={`relative inline-block text-black after:absolute after:left-0 after:-bottom-0.5 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
                 >
                   Business
                 </Link>
@@ -93,12 +86,7 @@ export default function FloatingNavbar() {
 
               {/* Search Button */}
               <div className='hidden md:flex items-center space-x-4'>
-                <button className='text-gray-500 hover:text-blue-600'>
-                  <FiSearch className='h-5 w-5' />
-                </button>
-                <button className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'>
-                  Subscribe
-                </button>
+                <Button variant={'outline'}>Subscribe</Button>
               </div>
             </div>
           </nav>

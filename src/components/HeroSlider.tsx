@@ -45,13 +45,11 @@ export default function HeroSlider() {
         loop: true,
       }}
       className='w-full'
-      showNavigation={false}
-      showDots={true}
     >
       <CarouselContent>
         {heroSlides.map((slide, index) => (
           <CarouselItem key={index} className='md:basis-full'>
-            <div className='relative h-[250px] md:h-[500px] w-full overflow-hidden'>
+            <div className='relative h-[250px] md:h-[600px] w-full overflow-hidden'>
               {/* Background Image */}
               <Image
                 src={slide.imageUrl}
@@ -91,7 +89,7 @@ export default function HeroSlider() {
       </CarouselContent>
 
       {/* Navigation and Dots */}
-      <div className='relative z-20 mt-4'>
+      {/* <div className='relative z-20 mt-4'>
         <div className='flex justify-center space-x-2'>
           {heroSlides.map((_, index) => (
             <div
@@ -101,7 +99,7 @@ export default function HeroSlider() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </Carousel>
   );
 }
