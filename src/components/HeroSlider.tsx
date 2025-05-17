@@ -46,14 +46,6 @@ const heroSlides = [
 const HeroSlider = () => {
   return (
     <section className="w-full bg-transparent py-10">
-       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/images/background.jpg" // Replace with your image path
-          alt="Background"
-          fill
-          className="object-cover brightness-75"
-        />
-      </div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         spaceBetween={30}
