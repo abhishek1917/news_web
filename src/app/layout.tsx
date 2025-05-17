@@ -3,6 +3,11 @@ import './globals.css';
 import Navbar from '@/components/layout/FloatingNavbar';
 import Footer from '@/components/layout/Footer';
 import { Merriweather, Open_Sans } from 'next/font/google';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
+
 
 const merriweather = Merriweather({
   subsets: ['latin'],
@@ -34,7 +39,7 @@ export default function RootLayout({
         className={`${merriweather.variable} ${openSans.variable} bg-white`}
       >
         <Navbar />
-        <main className='pt-13 md:pt-0'>{children}</main>
+        <main className='pt-13 md:pt-40 '>{children}</main>
         <Footer />
       </body>
     </html>

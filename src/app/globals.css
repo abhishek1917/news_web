@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 /* @import "tw-animate-css"; */
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -162,3 +163,17 @@ h6 {
     transition: color 0.3s;
     font-weight: bold;
 }
+/* .carousel-item {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.carousel-item:not(.is-active) {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.carousel-item.is-active {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 10;
+} */

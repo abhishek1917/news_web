@@ -49,7 +49,7 @@ export default function FloatingNavbar() {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className='hidden md:block fixed top-5 left-0 right-0 z-50'>
+      <div className='hidden md:block fixed top-5 left-0 right-0 z-50 '>
         <div className='mx-auto max-w-7xl px-4'>
           <nav
             className={`rounded-full py-2.5 px-6 transition-all duration-300 ${

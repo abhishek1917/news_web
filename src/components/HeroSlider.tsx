@@ -1,105 +1,118 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  // CarouselNext,
-  // CarouselPrevious,
-} from '@/components/ui/carousel';
-import { Button } from '@/components/ui/button';
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+import Image from "next/image";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 
 const heroSlides = [
   {
-    title: 'Breaking News: Global Climate Summit',
+    title: "Breaking News: Global Climate Summit",
     description:
-      'World leaders gather to discuss urgent climate action and sustainable solutions.',
-    imageUrl: '/news/image-1.jpg',
-    category: 'World',
-    link: '/news/image-1.jpg',
+      "World leaders gather to discuss urgent climate action and sustainable solutions.",
+    imageUrl: "/news/image-1.jpg",
+    category: "World",
+    link: "/news/image-1.jpg",
   },
   {
-    title: 'Tech Revolution: AI Transforms Industries',
+    title: "Breaking News: Market Crash",
     description:
-      'Artificial Intelligence is reshaping business, healthcare, and everyday life.',
-    imageUrl: '/news/image-2.jpg',
-    category: 'Technology',
-    link: '/news/image-2.jpg',
+      "World leaders gather to discuss urgent climate action and sustainable solutions.",
+    imageUrl: "/news/image-1.jpg",
+    category: "StockMarket",
+    link: "/news/image-1.jpg",
   },
   {
-    title: 'Economic Insights: Market Trends 2025',
+    title: "Tech Revolution: AI Transforms Industries",
     description:
-      'Experts predict significant shifts in global economic landscapes.',
-    imageUrl: '/news/image-3.jpg',
-    category: 'Business',
-    link: '/news/image-3.jpg',
+      "Artificial Intelligence is reshaping business, healthcare, and everyday life.",
+    imageUrl: "/news/image-2.jpg",
+    category: "Technology",
+    link: "/news/image-2.jpg",
+  },
+  {
+    title: "Economic Insights: Market Trends 2025",
+    description:
+      "Experts predict significant shifts in global economic landscapes.",
+    imageUrl: "/news/image-3.jpg",
+    category: "Business",
+    link: "/news/image-3.jpg",
   },
 ];
 
-export default function HeroSlider() {
+const HeroSlider = () => {
   return (
-    <Carousel
-      opts={{
-        align: 'start',
-        loop: true,
-      }}
-      className='w-full'
-    >
-      <CarouselContent>
+    <section className="w-full bg-transparent py-10">
+       <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/background.jpg" // Replace with your image path
+          alt="Background"
+          fill
+          className="object-cover brightness-75"
+        />
+      </div>
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+        spaceBetween={30}
+        slidesPerView={1}
+        effect="coverflow"
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 1, // no delay between slides
+          disableOnInteraction: false,
+        }}
+        speed={3000} // slow and smooth scroll
+        pagination={{ clickable: true }}
+        navigation={true}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 2,
+          slideShadows: false,
+        }}
+        className="w-full"
+      >
         {heroSlides.map((slide, index) => (
-          <CarouselItem key={index} className='md:basis-full'>
-            <div className='relative h-[250px] md:h-[600px] w-full overflow-hidden'>
-              {/* Background Image */}
+          <SwiperSlide key={index}>
+           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden m-6 max-w-[400px] md:max-w-[500px] lg:max-w-[600px] transition-transform duration-500 hover:scale-105">
+
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
-                fill
-                priority
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                className='absolute inset-0 object-cover brightness-50'
+                width={1000}
+                height={500}
+                className="w-full h-64 object-cover"
               />
-
-              {/* Content Overlay */}
-              <div className='relative z-10 container mx-auto px-4 h-full flex items-center'>
-                <div className='max-w-2xl text-white space-y-4'>
-                  <span className='bg-blue-600 px-3 py-1 rounded text-sm'>
-                    {slide.category}
-                  </span>
-                  <h1 className='text-2xl md:text-4xl font-bold'>
-                    {slide.title}
-                  </h1>
-                  <p className='text-base md:text-xl opacity-90 hidden md:block'>
-                    {slide.description}
-                  </p>
-                  <Link href={slide.link}>
-                    <Button
-                      variant='secondary'
-                      size='lg'
-                      className='text-sm md:text-base'
-                    >
-                      Read More
-                    </Button>
-                  </Link>
-                </div>
+              <div className="p-6">
+                <span className="text-sm text-indigo-500 font-bold uppercase">
+                  {slide.category}
+                </span>
+                <h2 className="text-xl font-bold mt-2">{slide.title}</h2>
+                <p className="text-sm text-gray-600 mt-2">{slide.description}</p>
+                <a
+                  href={slide.link}
+                  className="inline-block mt-4 text-indigo-600 hover:underline text-sm"
+                >
+                  Read More →
+                </a>
               </div>
             </div>
-          </CarouselItem>
+          </SwiperSlide>
         ))}
-      </CarouselContent>
-
-      {/* Navigation and Dots */}
-      {/* <div className='relative z-20 mt-4'>
-        <div className='flex justify-center space-x-2'>
-          {heroSlides.map((_, index) => (
-            <div
-              key={index}
-              data-carousel-dot={index}
-              className='w-2 h-2 rounded-full bg-black/50 hover:bg-black cursor-pointer transition-all'
-            />
-          ))}
-        </div>
-      </div> */}
-    </Carousel>
+      </Swiper>
+    </section>
   );
-}
+};
+
+export default HeroSlider;
