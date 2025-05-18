@@ -94,9 +94,7 @@ const HeroSlider = () => {
                 <p className="text-sm text-gray-600 mt-2">{slide.description}</p>
                 <a
                   href={slide.link}
-                  className="inline-block mt-4 text-indigo-600 hover:underline text-sm"
-                >
-                  Read More →
+                  className="inline-block mt-4 text-indigo-600 hover:underline text-sm">
                 </a>
               </div>
             </div>

@@ -1,12 +1,14 @@
 import NewsSection from '../components/NewsSection';
 import FeatureArticle from '../components/FeatureArticle';
 import HeroSlider from '../components/HeroSlider';
+import NewsApp from '@/components/NewsPapertext';
 
 export default function Home() {
   return (
     <main className='min-h-screen'>
       {/* Hero section */}
       <HeroSlider />
+      <NewsApp/>
 
       {/* Content area with extra padding to account for navbar */}
       <div className='container mx-auto px-4 pt-24 pb-12'>
