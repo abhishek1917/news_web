@@ -77,7 +77,7 @@ const HeroSlider = () => {
       >
         {heroSlides.map((slide, index) => (
           <SwiperSlide key={index}>
-           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden m-6 max-w-[400px] md:max-w-[500px] lg:max-w-[600px] transition-transform duration-500 hover:scale-105">
+           <div className="bg-red rounded-3xl shadow-2xl overflow-hidden m-6 max-w-[400px] md:max-w-[500px] lg:max-w-[600px] transition-transform duration-500 hover:scale-105">
 
               <Image
                 src={slide.imageUrl}
