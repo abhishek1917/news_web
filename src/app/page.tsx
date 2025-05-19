@@ -1,22 +1,32 @@
 import NewsSection from '../components/NewsSection';
 import FeatureArticle from '../components/FeatureArticle';
 import HeroSlider from '../components/HeroSlider';
-import NewsApp from '@/components/NewsPapertext';
+import Link from 'next/link';
+
+// import NewsApp from '@/components/NewsPapertext';
 
 export default function Home() {
   return (
     <main className='min-h-screen'>
       {/* Hero section */}
       <HeroSlider />
-      <NewsApp/>
+      {/* <NewsApp/> */}
 
       {/* Content area with extra padding to account for navbar */}
-      <div className='container mx-auto px-4 pt-24 pb-12'>
+      <div className='container mx-auto px-4 py-12'>
         {/* Featured articles */}
         <section className='mb-12'>
-          <h2 className='text-2xl font-bold mb-6 text-gray-800'>
-            Featured Stories
-          </h2>
+          <div className='flex justify-between items-center'>
+            <h2 className='text-4xl font-bold mb-6 text-gray-800 text-center'>
+              NewsPortal <span className='text-blue-600'>Original</span>
+            </h2>
+            <Link
+              href='/news'
+              className='text-blue-600 hover:text-blue-800 font-medium'
+            >
+              See More
+            </Link>
+          </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             <FeatureArticle
               title='Global Climate Summit Reaches Historic Agreement'
