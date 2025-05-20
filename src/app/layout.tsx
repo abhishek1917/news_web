@@ -41,7 +41,7 @@ export default function RootLayout({
         {/* <Navbar /> */}
         {/* <FloatingNavbar /> */}
         <Navbar />
-        <main className=' pt-14 md:pt-16'>{children}</main>
+        <main className=' pt-14 md:pt-15'>{children}</main>
         <Footer />
       </body>
     </html>

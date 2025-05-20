@@ -33,10 +33,10 @@ export default function FeatureArticle({
           <h3 className='text-lg font-bold text-gray-800 group-hover:text-blue-600 mb-2'>
             {title}
           </h3>
-          <p className='text-gray-600 text-sm'>
+          {/* <p className='text-gray-600 text-sm'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
             risus ac quam vulputate congue vitae vel ante.
-          </p>
+          </p> */}
         </div>
       </Link>
     </div>

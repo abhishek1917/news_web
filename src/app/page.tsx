@@ -16,18 +16,18 @@ export default function Home() {
       <div className='container mx-auto px-4 py-12'>
         {/* Featured articles */}
         <section className='mb-12'>
-          <div className='flex justify-between items-center'>
-            <h2 className='text-4xl font-bold mb-6 text-gray-800 text-center'>
+          <div className='flex justify-center md:justify-between '>
+            <h2 className='text-2xl md:text-4xl font-semibold md:font-bold mb-6 text-gray-800 text-center '>
               NewsPortal <span className='text-blue-600'>Original</span>
             </h2>
             <Link
               href='/news'
-              className='text-blue-600 hover:text-blue-800 font-medium'
+              className='hidden md:block  text-blue-600 hover:text-blue-800 font-normal md:font-medium'
             >
               See More
             </Link>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
             <FeatureArticle
               title='Global Climate Summit Reaches Historic Agreement'
               image='/news/image-1.jpg'
@@ -39,6 +39,51 @@ export default function Home() {
               image='/news/image-2.jpg'
               category='Technology'
               timeToRead='4 min read'
+            />
+            <FeatureArticle
+              title='Global Markets Rally After Economic Data'
+              image='/news/image-3.jpg'
+              category='Finance'
+              timeToRead='3 min read'
+            />
+            <FeatureArticle
+              title='Global Markets Rally After Economic Data'
+              image='/news/image-3.jpg'
+              category='Finance'
+              timeToRead='3 min read'
+            />
+          </div>
+        </section>
+        <section className='mb-12'>
+          <div className='flex justify-center md:justify-between '>
+            <h2 className='text-4xl font-bold mb-6 text-gray-800 text-center'>
+              Trending
+            </h2>
+            <Link
+              href='/news'
+              className='hidden md:block text-blue-600 hover:text-blue-800 font-medium'
+            >
+              See More
+            </Link>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
+            <FeatureArticle
+              title='Global Climate Summit Reaches Historic Agreement'
+              image='/news/image-1.jpg'
+              category='Environment'
+              timeToRead='5 min read'
+            />
+            <FeatureArticle
+              title='Tech Giants Unveil New AI Advances'
+              image='/news/image-2.jpg'
+              category='Technology'
+              timeToRead='4 min read'
+            />
+            <FeatureArticle
+              title='Global Markets Rally After Economic Data'
+              image='/news/image-3.jpg'
+              category='Finance'
+              timeToRead='3 min read'
             />
             <FeatureArticle
               title='Global Markets Rally After Economic Data'
